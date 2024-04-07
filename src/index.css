@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+
+:root {
+  --primary-color: rgb(160, 204, 65);
+  --secondary-color: rgb(69, 69, 69);
+  --secondary-color-half: rgb(139, 139, 139);
+  --gray-color: rgb(237, 237, 237);
+  --white-color: rgb(235, 242, 215);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  /* height: 100vh; */
+  /* overflow: hidden; */
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container .top {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 83dvh;
+}
+
+.container .top .half {
+  width: 50%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.container .top .half .items {
+  padding: 30px;
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(5, 1fr);
+  z-index: 99;
+}
+.container .top .half .items .item {
+  list-style: none;
+  font-size: 50px;
+  text-align: center;
+}
+
+.container .top .left {
+  border-right: 3px solid var(--secondary-color-half);
+}
+.container .top .right {
+  border-left: 3px solid var(--secondary-color-half);
+}
+
+.container .top .half .centered {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 60px;
+  z-index: -1;
+}
+
+.container .top .half dl {
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.container .top .half dl dt {
+  /* font-size: 30px; */
+  transform: translateX(-20%);
+}
+.container .top .half dl dd {
+  /* font-size: 25px; */
+  transform: translateX(20%);
+}
+
+.container .bottom {
+  width: 100%;
+  height: 10dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .bottom .img-container {
+  width: 250px;
+  height: 100%;
+}
+.container .bottom .img-container img {
+  width: 100%;
+}
+
+.container form {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+}
+
+.text-primary {
+  color: var(--primary-color) !important;
+}
+.text-secondary {
+  color: var(--secondary-color) !important;
+}
+.bg-primary {
+  background-color: var(--primary-color) !important;
+}
+.bg-secondary {
+  background-color: var(--secondary-color) !important;
+}
+
+.text-gray {
+  color: var(--gray-color) !important;
+}
+.text-white {
+  color: var(--white-color) !important;
+}
+
+@media (max-width: 1100px) {
+  .container .top .half .items {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
