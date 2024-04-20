@@ -4,7 +4,6 @@ import notice from "./assets/notification.mp3";
 import ReactAudioPlayer from "react-audio-player";
 import Logo from "./assets/appetitlogo.png";
 
-
 function App() {
   const [audioPlayed, setAudioPlayed] = useState(false);
   const clearCompleteOrdersTimeout = useRef(null);
@@ -71,7 +70,18 @@ function App() {
   }, []);
 
   return (
-    <main className="container">
+    <main className="container" style={{ position: "relative" }}>
+      <div
+        style={{
+          position: "absolute",
+          width: "100vw",
+          height: "100vh",
+          zIndex: "99999",
+        }}
+        onClick={() => {
+          inputRef.current.focus()
+        }}
+      ></div>
       {audioPlayed && (
         <ReactAudioPlayer
           src={notice}
