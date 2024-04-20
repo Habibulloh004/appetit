@@ -56,11 +56,11 @@ function App() {
     }
   };
 
-  useEffect(() => {
-    if (inputValue.length === 3) {
-      submit(new Event("submit"));
-    }
-  }, [inputValue]);
+  // useEffect(() => {
+  //   if (inputValue.length === 3) {
+  //     submit(new Event("submit"));
+  //   }
+  // }, [inputValue]);
 
   useEffect(() => {
     return () => {
